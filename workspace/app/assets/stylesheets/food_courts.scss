@@ -1,0 +1,21 @@
+// Place all the styles related to the food_courts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table#foodCourtList {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid cyan;
+}
+table#foodCourtList th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: cyan;
+}
+table#foodCourtList th, table#foodCourtList td {
+  padding: 4px;
+  text-align: left;
+}
+table#foodCourtList th.hilite {
+  background-color: salmon;
+}

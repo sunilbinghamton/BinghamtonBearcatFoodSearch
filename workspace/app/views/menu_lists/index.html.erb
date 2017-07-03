@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Menu Lists</h1>
+<table id="menulist">
+  <thead>
+    <tr>
+      <th>Menu Item</th>
+      <th>Price in $</th>
+      <th>Review and Ratings</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @menu_list.each do |menu_list| %>
+      <tr>
+        <td><%= menu_list.menu_item %></td>
+        <td><%= menu_list.price %></td>
+          <td>
+              <%= link_to 'Rate', new_reviews_and_rating_path(menu_list) %>
+          </td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+  
+</table>
+

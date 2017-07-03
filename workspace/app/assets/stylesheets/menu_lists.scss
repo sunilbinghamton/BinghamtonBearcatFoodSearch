@@ -1,0 +1,21 @@
+// Place all the styles related to the menu_lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table#menulist {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid cyan;
+}
+table#menulist th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: cyan;
+}
+table#menulist th, table#menulist td {
+  padding: 4px;
+  text-align: left;
+}
+table#menulist th.hilite {
+  background-color: yellow;
+}

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Food Courts</h1>
+
+<table id= "foodCourtList">
+    
+  <thead>
+    <tr>
+      <th class="<%= @foodCourt_header %>">
+  <%= link_to 'Food Courts', food_courts_path(:sort => 'foodCourt'), :id => 'foodCourt_header' %>
+  </th>  
+  <th class="<%= @distance_header %>">
+    <%= link_to 'Distance from Union', food_courts_path(:sort => 'distance'), :id => 'distance_header' %>
+  </th>
+    </tr>
+  </thead>
+   <tbody>
+    <% @food_court.each do |food_court| %>
+      <tr>
+        <td><%= link_to "#{food_court.foodCourt}", food_outlet_path(food_court)%></td>
+        <td><%= food_court.distance %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+  <div style="visibility: hidden">
+        <%= link_to "Link to Food Outlet", food_outlet_path(1)%>
+    </div>
+</table>

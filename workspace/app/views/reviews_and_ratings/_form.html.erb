@@ -1,0 +1,34 @@
+<%= form_for(@reviews_and_rating) do |f| %>
+  <% if @reviews_and_rating.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reviews_and_rating.errors.count, "error") %> prohibited this reviews_and_rating from being saved:</h2>
+
+      <ul>
+      <% @reviews_and_rating.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<form>
+  <select name="Rate">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <br><br>
+  <div class="actions">
+    <%#= f.submit "Rate"%>
+    <%#= f.submit "Stars"%>
+  </div>
+  
+  <textarea name="message" rows="10" cols="30">Enter your reviews here.</textarea>
+  <br>
+  <input type="submit">
+</form>
+
+  
+<% end %>

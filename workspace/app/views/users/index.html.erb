@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bearcat Food Search</h1>
+
+<div style="font-weight: bold; width:1400px; margin:50 auto; text-align: center;font-size: larger;"> <%= link_to 'Sign Up', new_user_path %>
+ <%= link_to 'Login', login_path %> </div>
+
+<img src="http://connorarchitecture.com/website/wp-content/uploads/2014/06/PAGE-HEADER-Binhamton-University-Union-NEW-CAMPUS-HOT-SPOT-Food-Management-Mag.-2014.jpg" alt="Bearcat Food" style="width:1500px;height:480px;">
+<table>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+ <div style="font-weight: bold; width:1400px; margin:50 auto; text-align: center; font-size: larger;"><%= link_to 'Food Court Listing', food_courts_path %>
+ </div>
